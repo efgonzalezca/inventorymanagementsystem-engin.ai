@@ -1,0 +1,19 @@
+{
+  "name": "inventorymanagementsystem-engin.ai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install:both": "cd frontend && npm install && cd ../backend && npm install",
+    "start:backend": "cd backend && npm start",
+    "start:both": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:frontend": "cd frontend && npm start",
+    "start": "npm install && npm run install:both && npm run start:both"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
