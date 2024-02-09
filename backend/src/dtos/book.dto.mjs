@@ -1,15 +1,15 @@
 import Joi from 'joi';
 
-const title = Joi.string().max(1000).messages({
+const title = Joi.string().max(100).messages({
   'string.base': 'title must be a string',
   'string.empty': 'title is not allowed to be empty',
-  'string.max': 'title length must be less than or equal to 1000 characters long',
+  'string.max': 'title length must be less than or equal to 100 characters long',
   'any.required': 'title field is requerid'
 })
-const author = Joi.string().max(1000).messages({
+const author = Joi.string().max(100).messages({
   'string.base': 'author must be a string',
   'string.empty': 'author is not allowed to be empty',
-  'string.max': 'author length must be less than or equal to 1000 characters long',
+  'string.max': 'author length must be less than or equal to 100 characters long',
   'any.required': 'author field is requerid'
 })
 const price = Joi.number().positive().greater(0).messages({
