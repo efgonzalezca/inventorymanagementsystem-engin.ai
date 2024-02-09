@@ -1,0 +1,725 @@
+{
+	"info": {
+		"_postman_id": "7247ceae-cfc2-419d-8ec7-cd15b3f2c051",
+		"name": "Inventory Management System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14790662"
+	},
+	"item": [
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "read",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4800/api/books?page=1&limit=9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4800",
+							"path": [
+								"api",
+								"books"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful read",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4800/api/books?page=1&limit=9",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4800",
+									"path": [
+										"api",
+										"books"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "9"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1234"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4d2-iyk8GOAYBlkvmX9MrI/DunDlq2k\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 08 Feb 2024 17:16:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"page\": \"1\",\n    \"perPage\": \"9\",\n    \"total\": 10,\n    \"totalPages\": 2,\n    \"data\": [\n        {\n            \"id\": \"b8d8c3b3-1447-4e44-b55e-67b6e7d7d733\",\n            \"title\": \"The Martian\",\n            \"author\": \"Andy Weir\",\n            \"price\": 12.6,\n            \"stockQuantity\": 4\n        },\n        {\n            \"id\": \"a0d8f1e1-6d8e-4b18-80e1-02430c7cbfd9\",\n            \"title\": \"Pride and Prejudice\",\n            \"author\": \"Jane Austen\",\n            \"price\": 15.8,\n            \"stockQuantity\": 7\n        },\n        {\n            \"id\": \"c7e0f40b-393d-4b35-aa4f-f39e4fc65f38\",\n            \"title\": \"To Kill a Mockingbird\",\n            \"author\": \"Harper Lee\",\n            \"price\": 9.99,\n            \"stockQuantity\": 10\n        },\n        {\n            \"id\": \"d68b12b0-7e61-4df4-8247-9e48dcf1f49d\",\n            \"title\": \"The Lord of the Rings\",\n            \"author\": \"J.R.R. Tolkien\",\n            \"price\": 21.5,\n            \"stockQuantity\": 3\n        },\n        {\n            \"id\": \"9e6177ac-fd06-48d0-ae68-1c756dcbff49\",\n            \"title\": \"One Hundred Years of Solitude\",\n            \"author\": \"Gabriel García Márquez\",\n            \"price\": 17.25,\n            \"stockQuantity\": 6\n        },\n        {\n            \"id\": \"f9ef907f-83de-4e36-9620-022aaedfb4d4\",\n            \"title\": \"Circe\",\n            \"author\": \"Madeline Miller\",\n            \"price\": 11.75,\n            \"stockQuantity\": 8\n        },\n        {\n            \"id\": \"06a29e5b-f7df-4091-81a1-d9b075c5cbad\",\n            \"title\": \"El hombre de tiza\",\n            \"author\": \"C.J. Tudor\",\n            \"price\": 14.99,\n            \"stockQuantity\": 12\n        },\n        {\n            \"id\": \"a3e3ee8d-31d4-4530-a491-45d83eeb91e6\",\n            \"title\": \"The Book Thief\",\n            \"author\": \"Markus Zusak\",\n            \"price\": 8.5,\n            \"stockQuantity\": 5\n        },\n        {\n            \"id\": \"4c15b7c5-3cc3-48c3-b045-45a9f44d1a33\",\n            \"title\": \"Invisible Man\",\n            \"author\": \"Ralph Ellison\",\n            \"price\": 19.99,\n            \"stockQuantity\": 9\n        }\n    ]\n}"
+						},
+						{
+							"name": "Error in query params",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4800/api/books?page=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4800",
+									"path": [
+										"api",
+										"books"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "9",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "48"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"30-QYjA4wH4qYxZxzpYBOwg/mg/6Vk\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 09 Feb 2024 05:21:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errors\": {\n        \"limit\": [\n            \"limit field is requerid\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "remove by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4800/api/books/a0d8f1e1-6d8e-4b18-80e1-02430c7cbfd9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4800",
+							"path": [
+								"api",
+								"books",
+								"a0d8f1e1-6d8e-4b18-80e1-02430c7cbfd9"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successful delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4800/api/books/a0d8f1e1-6d8e-4b18-80e1-02430c7cbfd9",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4800",
+									"path": [
+										"api",
+										"books",
+										"a0d8f1e1-6d8e-4b18-80e1-02430c7cbfd9"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "76"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4c-Z0kqnpc1Uf216WgGPI+CYNIu8Ac\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 08 Feb 2024 17:23:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Book a0d8f1e1-6d8e-4b18-80e1-02430c7cbfd9 deleted successfully\"\n}"
+						},
+						{
+							"name": "book not found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4800/api/books/a0d8f1e1-6d8e-4b18-80e1-02430c7cbfd9",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4800",
+									"path": [
+										"api",
+										"books",
+										"a0d8f1e1-6d8e-4b18-80e1-02430c7cbfd9"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "65"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"41-HLuAC080Q5NICQrT662ym6qzCek\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 08 Feb 2024 17:23:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Book a0d8f1e1-6d8e-4b18-80e1-02430c7cbfd9 not found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "update by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Update book\",\r\n    \"author\": \"Test author\",\r\n    \"price\": 12.3,\r\n    \"stockQuantity\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4800/api/books/b8d8c3b3-1447-4e44-b55e-67b6e7d7d733",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4800",
+							"path": [
+								"api",
+								"books",
+								"b8d8c3b3-1447-4e44-b55e-67b6e7d7d733"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "successful update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Update book\",\r\n    \"author\": \"Test author\",\r\n    \"price\": 12.3,\r\n    \"stockQuantity\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4800/api/books/b8d8c3b3-1447-4e44-b55e-67b6e7d7d733",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4800",
+									"path": [
+										"api",
+										"books",
+										"b8d8c3b3-1447-4e44-b55e-67b6e7d7d733"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "76"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4c-LLDEzigiBSdE7Hang7dxQVR5NEM\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 08 Feb 2024 17:22:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Book b8d8c3b3-1447-4e44-b55e-67b6e7d7d733 updated successfully\"\n}"
+						},
+						{
+							"name": "book not found",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Update book\",\r\n    \"author\": \"Test author\",\r\n    \"price\": 12.3,\r\n    \"stockQuantity\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4800/api/books/b8d8c3b3-1447-4e44-b55e-67b6e7d7d732",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4800",
+									"path": [
+										"api",
+										"books",
+										"b8d8c3b3-1447-4e44-b55e-67b6e7d7d732"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "65"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"41-gVdC0xIP+5PiSifJaglQtrPIStw\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 08 Feb 2024 17:29:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Book b8d8c3b3-1447-4e44-b55e-67b6e7d7d732 not found\"\n}"
+						},
+						{
+							"name": "Error in body request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Update book\",\r\n    \"author\": \"\",\r\n    \"price\": 12.3,\r\n    \"stockQuantity\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4800/api/books/b8d8c3b3-1447-4e44-b55e-67b6e7d7d733",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4800",
+									"path": [
+										"api",
+										"books",
+										"b8d8c3b3-1447-4e44-b55e-67b6e7d7d733"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "59"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3b-yT8/OjdwVDWmbrM2MBHRcd8Pqfk\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 09 Feb 2024 02:19:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errors\": {\n        \"author\": [\n            \"author is not allowed to be empty\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Test\",\r\n    \"author\": \"Efraín González Castillo\",\r\n    \"price\": 40.1,\r\n    \"stockQuantity\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4800/api/books/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4800",
+							"path": [
+								"api",
+								"books",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful creation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Test\",\r\n    \"author\": \"Efraín González Castillo\",\r\n    \"price\": 40.1,\r\n    \"stockQuantity\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4800/api/books/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4800",
+									"path": [
+										"api",
+										"books",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"27-+O07pBqP5Fd2VYVmvRk8bFW9mBg\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 08 Feb 2024 17:21:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Book created successfully\"\n}"
+						},
+						{
+							"name": "Error in body request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Test\",\r\n    \"author\": \"Efraín González Castillo\",\r\n    \"price\": 0,\r\n    \"stockQuantity\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4800/api/books/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4800",
+									"path": [
+										"api",
+										"books",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "87"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"57-wFONCCZvvY34BlybnJULdzoIls0\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 09 Feb 2024 02:19:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errors\": {\n        \"price\": [\n            \"price must be a positive number\",\n            \"price must be greater than 0\"\n        ]\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
