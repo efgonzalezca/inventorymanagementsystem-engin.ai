@@ -94,8 +94,82 @@ The app is a single view using React and has the following structure:
 
 # 🎁Bonus Points
 
+The API is built in Express web application framework and has the following structure:
+
+```
+📦src
+ ┣ 📂api
+ ┃ ┣ 📂controllers
+ ┃ ┃ ┗ 📜books.controller.mjs
+ ┃ ┣ 📂middlewares
+ ┃ ┃ ┣ 📜error.handler.mjs
+ ┃ ┃ ┣ 📜route.handler.mjs
+ ┃ ┃ ┗ 📜validator.handler.mjs
+ ┃ ┗ 📂routes
+ ┃ ┃ ┣ 📜books.route.mjs
+ ┃ ┃ ┗ 📜index.mjs
+ ┣ 📂config
+ ┃ ┗ 📜index.mjs
+ ┣ 📂dtos
+ ┃ ┗ 📜book.dto.mjs
+ ┣ 📂models
+ ┃ ┗ 📜Server.mjs
+ ┣ 📂services
+ ┃ ┗ 📜book.service.mjs
+ ┗ 📜index.mjs
+```
+
+### Data validation
+
+- The `Joi` library is used to validate data entry at each endpoint.
+- Validation is done before any request is processed (in a middleware `validator.handler.mjs`), which helps avoid errors.
+
+### Security
+
+- A `config` directory is established to centralize the management of environment variables required by the application, such as the `PORT` variable, for future use. No environment variables are created to avoid uploading the .env file, sparing the reviewer from having to create it for this particular case.
+
+### Error handling
+
+- A centralized error handling system (in a middleware `error.handler.mjs`) is used to handle all exceptions that may occur.
+- HTTP status codes are used to indicate the type of error.
+
+### Documentation
+
+- Complete API documentation has been created using Postman.
+- The documentation includes information about the endpoints, parameters, responses, and examples.
+
+### Endpoins
+
+- `Base URL`: http://localhost:4800/api
+- `POST /books`: Create a new book.
+    - Successful Response:
+        - Code: 201 Created
+    - Error Response:
+        - Code: 400 Bad Request 
+        - Code: 500 Internal Server Error
+- `GET /books?page={page}&limit={limit}`: Gets a paginated list of books.
+    - Successful Response:
+        - Code: 200 OK
+    - Error Response:
+        - Code: 400 Bad Request 
+        - Code: 500 Internal Server Error
+- `PUT /books/{bookId}`: Update a book by its bookId.
+    - Successful Response:
+        - Code: 200 OK
+    - Error Response:
+        - Code: 400 Bad Request 
+        - Code: 404 Not Found 
+        - Code: 500 Internal Server Error
+- `DELETE /books/{bookId}`: Delete a book by its bookId.
+    - Successful Response:
+        - Code: 200 OK
+    - Error Response:
+        - Code: 404 Not Found 
+        - Code: 500 Internal Server Error
+
 # 🔧Built With
 
 * [Node.js](https://nodejs.org/es)
 * [React](https://es.react.dev/)
 * [Axios](https://axios-http.com/es/docs/intro)
+* [Express.js](https://expressjs.com/es/)
