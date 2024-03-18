@@ -83,7 +83,7 @@ export const ModalBook = ({ onClose, onSave, onUpdate, selectedBook }) => {
   }
   const handleSubmit = () => {
     const hasErrors = Object.values(errors).some((error) => !!error);
-    const hasEmptyFields = Object.values(formData).some((value) => !value.trim());
+    const hasEmptyFields = Object.values(formData).some((value) => typeof(value) === 'string' ? !value.trim() : !value);
     if (!hasErrors && !hasEmptyFields) {
       if(selectedBook) {
         onUpdate(formData);
