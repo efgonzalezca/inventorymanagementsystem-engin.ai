@@ -138,7 +138,7 @@ The API is built in Express web application framework and has the following stru
 - Complete API documentation has been created using Postman.
 - The documentation includes information about the endpoints, parameters, responses, and examples.
 
-### Endpoins
+### Endpoints
 
 - `Base URL`: http://localhost:4800/api
 - `POST /books`: Create a new book.
